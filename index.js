@@ -29,3 +29,12 @@ app.get('/', (req, res) =>
 app.listen(PORT, () =>
   console.log(`The server I built is running on port ${PORT}`)
 );
+
+// Serve static files
+app.use(express.static('public'));
+
+// To start the server run:
+// npm start
+
+// Also, make sure mongodb is running with this command:
+// brew services start mongodb-community@4.4
